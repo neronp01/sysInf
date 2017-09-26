@@ -1,0 +1,29 @@
+<md-card  class="view_card_editeur">
+  <md-card-header>
+    <md-card-title  class="card_title">Gestion des accès</md-card-title>
+
+  </md-card-header>
+
+  <md-card-content>
+
+    <md-card class="md_card_editeur" >
+      <md-form-field class="example-full-width" class="input_editeur">
+        <input mdInput #newname placeholder="Inscriver le nom de l'éditeur" value="">
+      </md-form-field>
+      <button md-mini-fab color="primary" (click)="save(newname.value);newname.value=''"><i class="material-icons">add</i></button>
+
+    </md-card>
+    <md-card class="md_card_editeur" *ngFor="let editeur of editeurList | async " >
+      <span> {{editeur.val().email}}</span>
+      <button md-button (click)="deleteItem(editeur.key)" class="editeur_clear_button"><i class="material-icons editeur_clear">clear</i></button>
+</md-card>
+
+
+
+
+
+  </md-card-content>
+</md-card>
+
+
+

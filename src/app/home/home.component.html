@@ -1,0 +1,82 @@
+<md-toolbar color="primary" >
+<md-toolbar-row >
+  <img class="toolbar-titre" src="./assets/svg_fournisseur_acces/titre.svg"/>
+<span [@flyInOut]="state" class="titre"></span>
+<span class="example-spacer"> </span>
+<div class="toolbar-user-name">Bonjour {{user}}</div>
+<button md-mini-fab (click)="logOut()" class="toolbar_menu_button"><i class="material-icons">more_vert</i></button>
+</md-toolbar-row>
+</md-toolbar>
+<md-tab-group color="primary" backgroundColor="primary">
+<md-tab label="Aperçu" >
+<app-apercu class='enfants'></app-apercu>
+</md-tab>
+<md-tab label="Adnotatio">
+
+  <md-grid-list cols="5" rowHeight="1:1">
+  <md-grid-tile colspan="2">
+  <md-card  class="view_card">
+  <md-card-header >
+  <md-card-title>Shiba Inu</md-card-title>
+  <md-card-subtitle>Dog Breed</md-card-subtitle>
+  </md-card-header>
+  <md-card-content>
+  <br>
+  <!--<h2 *ngIf="estUnEditeur">Vous êtes un éditeur</h2>-->
+  <p>
+  The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
+  A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
+  bred for hunting.
+  </p>
+  </md-card-content>
+  </md-card>
+  </md-grid-tile>
+  <md-grid-tile colspan="1">
+  </md-grid-tile>
+  <md-grid-tile colspan="2">
+  <md-card  class="view_card">
+  <md-card-header>
+  <md-card-title>Shiba Inu </md-card-title>
+  <md-card-subtitle *ngIf="estUnEditeur">Vous êtes un(e) éditeur(trice)</md-card-subtitle>
+    <md-card-subtitle *ngIf="!estUnEditeur">Vous êtes un(e) lecteur(trice)</md-card-subtitle>
+  </md-card-header>
+  <md-card-content>
+  <p>
+  The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
+  A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
+  bred for hunting.
+  </p>
+  </md-card-content>
+  </md-card>
+  </md-grid-tile>
+  </md-grid-list>
+
+</md-tab>
+<md-tab label="Administrateur" *ngIf="estUnAdministrateur">
+<app-administrateur class='enfants' [editeurList]="editeurList"></app-administrateur>
+</md-tab>
+</md-tab-group>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

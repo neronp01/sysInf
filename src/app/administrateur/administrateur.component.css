@@ -1,0 +1,36 @@
+.md_card_editeur{
+  margin: 25px;
+}
+button{
+  float:right;
+}
+
+.view_card_editeur{
+  margin-left: 200px;
+  margin-top:50px;
+  margin-right: 200px;
+}
+
+.card_title{
+  font-size: 150%;
+  color:#673AB7;
+
+}
+
+span{
+  color:#673AB7
+}
+.editeur_clear{
+  color:#673AB7;
+  font-size: 100%;
+}
+
+.input_editeur{
+  width: 85%;
+}
+
+.editeur_clear_button{
+  position: absolute;
+  top:15px;
+  right:5px;
+}

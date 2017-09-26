@@ -1,0 +1,42 @@
+
+
+
+
+.titre{
+
+}
+
+.tab{
+  margin-left: 500px;
+}
+
+.menu_bar_user_name{
+  text-align: center;
+}
+
+
+
+.example-spacer {
+  flex: 1 1 auto;
+}
+
+.toolbar_menu_button {
+  margin: 0 0 0 30px;
+}
+
+.enfants{
+  height: 800px;
+}
+@media (max-width: 1000px) {
+  .container{
+    margin-left:0px;
+    margin-right: 0px;
+    margin-top:0px;
+
+  }
+}
+
+#test{
+  position: fixed;
+  top:0px
+}

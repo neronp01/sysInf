@@ -1,0 +1,69 @@
+
+<!--<md-grid-list cols="3" rowHeight="5:1" class="identification_grid">-->
+  <!--<md-grid-tile>-->
+  <!--</md-grid-tile>-->
+  <!--<md-grid-tile>-->
+
+    <!--<md-card class="identification-card">-->
+      <!--<md-card-content>-->
+        <!--<md-grid-list cols="5">-->
+          <!--<md-grid-tile colspan="4">-->
+            <!--<h2> Identification </h2>-->
+          <!--</md-grid-tile>-->
+          <!--<md-grid-tile colspan="1">-->
+            <!--<button md-mini-fab color="accent" (click)="login(!authService.isLoggedIn)" *ngIf="!authService.isLoggedIn"><i class="material-icons">perm_identity</i></button>-->
+            <!--<button md-mini-fab color="accent" (click)="logout(!authService.isLoggedIn)" *ngIf="authService.isLoggedIn"><i class="material-icons">perm_identity</i></button>-->
+
+          <!--</md-grid-tile>-->
+        <!--</md-grid-list>-->
+      <!--</md-card-content>-->
+    <!--</md-card>-->
+  <!--</md-grid-tile>-->
+  <!--<md-grid-tile></md-grid-tile>-->
+
+  <md-grid-list cols="1" rowHeight="800px" class="grid_list_login">
+    <md-grid-tile colspan="1" class="title">
+      <md-card class="md_card_login">
+        <md-card-title></md-card-title>
+        <md-card-content>
+          <md-grid-list cols="4" rowHeight="100px">
+            <md-grid-tile colspan = "4" rowspan="3" class="un">
+              <div class="logo"><app-svg-text></app-svg-text></div>
+              <img class="titre-login" src="./assets/svg_fournisseur_acces/titre.svg"/>
+            </md-grid-tile>
+            <md-grid-tile colspan = "4" rowspan="1" class="deux">
+              <h2 class="login-titre">Vous devez vous identifier</h2>
+            </md-grid-tile>
+            <md-grid-tile  colspan = "4" rowspan="4" class="trois">
+              <md-list>
+                <md-list-item class="list-item-button">
+                  <button md-raised-button (click)="facebookLogin()" routerLink="/inscription" routerLinkActive="active" color="primary" style="width: 400px ;  height:75px"><h3 class="login-text-button">Connectez-vous avec Facebook</h3> <img class="image-providers" src="./assets/svg_fournisseur_acces/Facebook_Home_logo_old.svg"/></button>
+                </md-list-item>
+                <md-list-item class="list-item-button">
+                  <button (click)="googleLogin()" md-raised-button routerLink="/inscription" routerLinkActive="active" color="primary" style="width: 400px ;  height:75px"><h3 class="login-text-button">Connectez-vous avec Google</h3> <img class="google" src="./assets/svg_fournisseur_acces/Google_-G-_Logo.svg"/></button>
+                </md-list-item>
+                <md-list-item class="list-item-button">
+                  <button (click)=" twitterLogin()" md-raised-button routerLink="/inscription" routerLinkActive="active" color="primary" style="width: 400px ;  height:75px"><h3 class="login-text-button">Connectez-vous avec Twitter</h3> <img class="google" src="./assets/svg_fournisseur_acces/Twitter_Bird.svg"/></button>
+                </md-list-item>
+                <md-list-item class="list-item-button">
+                  <button (click)=" twitterLogin()" md-raised-button routerLink="/inscription" routerLinkActive="active" color="primary" style="width: 400px ;  height:75px"><h3 class="login-text-button">Connectez-vous avec Twitter</h3> <img class="imgGit" src="./assets/svg_fournisseur_acces/github.svg"/></button>
+                </md-list-item>
+              </md-list>
+            </md-grid-tile>
+          </md-grid-list>
+        </md-card-content>
+        <md-card-actions>
+          <button md-button (click)="getAuth()"><p class="login-jouindre-button">Pour nous rejouindre</p></button>
+        </md-card-actions>
+      </md-card>
+    </md-grid-tile>
+  </md-grid-list>
+
+
+
+
+
+
+
+
+
